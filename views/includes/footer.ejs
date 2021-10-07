@@ -1,0 +1,24 @@
+<footer class="footer">
+
+    <!-- first page and page -1 -->
+    <% if (currentPage > 1) { %>
+    <a class="genre-button" href="<%= `${url}/1` %>">«</a>
+    <a class="genre-button" href="<%= `${url}/${currentPage-1}` %>">‹</a>
+    <% } %>
+
+    <% for( let page = Math.max(1, currentPage-3); page <= Math.min(lastPage, currentPage+3); page++ ) { %>
+    <% if (page==currentPage) { %>
+    <p class="genre-button genre-button-inactive"><%= page %> </p>
+    <% } else { %>
+    <a class="genre-button" href="<%= `${url}/${page}` %>"><%= page %> </a>
+    <% } %>
+    <% } %>
+
+    <!-- page +1 and last page  -->
+    <% if (currentPage < lastPage) { %>
+    <a class="genre-button" href="<%= `${url}/${currentPage+1}` %>">›</a>
+    <a class="genre-button" href="<%= `${url}/${lastPage}` %>">»</a>
+    <% } %>
+
+
+</footer>

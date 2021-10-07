@@ -1,8 +1,9 @@
 <div class="movie-card">
-
-    <div class="movie-card-image"
-        style="background: url('https://image.tmdb.org/t/p/w500<%= movie.poster_path %>') center/cover no-repeat;">
-    </div>
-    <p class="movie-card-title"><%= movie.title %></p>
-
+    <a href="/details/<%= movie.id %>">
+        <!-- style="background: url('https://image.tmdb.org/t/p/w500<%= movie.backdrop_path %>') center/cover no-repeat;"> -->
+        <div class="movie-card-image"
+            style="background: url('https://image.tmdb.org/t/p/w500<%= movie.poster_path %>') center/cover no-repeat;">
+        </div>
+        <p class="movie-card-title"><%= movie.title %></p>
+    </a>
 </div>

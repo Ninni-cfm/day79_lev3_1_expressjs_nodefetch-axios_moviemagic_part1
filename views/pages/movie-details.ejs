@@ -11,9 +11,30 @@
 </head>
 
 <body>
-    <% console.log(movies) %>
+    <%- include('../includes/header.ejs') %>
+    <section class="movie-details">
 
+        <div class="movie-details-image"
+            style="background: url('https://image.tmdb.org/t/p/w1280<%= details.backdrop_path %>') top/cover no-repeat;">
+        </div>
 
+        <div class="movie-details-details">
+
+            <h1><%= details.title %></h1>
+            <p><%= details.release_date %> <span><%= details.status %></span> </p>
+
+            <div>
+                <% details.genres.forEach(genre => { %>
+                <a class="genre-button" href="/genres/<%= genre.id %>"><%= genre.name %></a>
+                <% }) %>
+            </div>
+
+            <h3>Plot Summary</h3>
+            <p><%= details.overview %> </details>
+            </p>
+        </div>
+
+    </section>
 
     <script src="/assets/js/main.js"></script>
 </body>

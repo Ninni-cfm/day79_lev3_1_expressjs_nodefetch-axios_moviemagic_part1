@@ -11,6 +11,35 @@ html {
     scroll-behavior: smooth;
     font-family: "Poppins", sans-serif;
     background: #333;
+    color: #fff;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a:visited {
+    color: #fff;
+}
+
+/****************************************************************************/
+.err404 {
+    padding-top: 40vh;
+    text-align: center;
+}
+
+.err404 a {
+    margin: 2rem;
+}
+
+/****************************************************************************/
+.footer {
+    text-align: center;
+    padding-bottom: 5vh;
+}
+
+/****************************************************************************/
+.genres {
+    text-align: center;
 }
 
 /****************************************************************************/
@@ -21,6 +50,8 @@ html {
     justify-content: space-around;
     gap: 20px;
 }
+
+/****************************************************************************/
 .movie-card {
     width: 300px;
     padding-bottom: 20px;
@@ -33,4 +64,49 @@ html {
 }
 .movie-card-title {
     color: #fff;
+}
+
+/****************************************************************************/
+.movie-details-image {
+    height: 600px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+}
+.movie-details-details {
+    padding: 10%;
+    color: #ccc;
+    width: 50%;
+}
+.movie-details-details > div {
+    padding: 1rem 0;
+}
+
+.movie-details-details h1 {
+    color: #fff;
+    font-weight: 600;
+}
+.movie-details-details h3 {
+    color: #fff;
+    font-weight: 400;
+}
+
+.movie-details-details p {
+    color: #fff;
+    font-weight: 200;
+}
+
+.genre-button {
+    display: inline-block;
+    margin-right: 0.5em;
+    padding: 0.5rem 1rem;
+    color: #ccc;
+    border: 1px solid #ffffff20;
+    border-radius: 20px;
+}
+.genre-button:visited {
+    color: #ccc;
+}
+
+.genre-button-inactive {
+    background-color: #666;
 }

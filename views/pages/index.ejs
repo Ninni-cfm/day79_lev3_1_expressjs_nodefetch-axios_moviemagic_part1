@@ -11,13 +11,15 @@
 
 <body>
     <%- include('../includes/header.ejs') %>
-    <%- include('../includes/movie-categories.ejs', {categories: categories}) %>
+    <%- include('../includes/movie-genres.ejs', {genres: genres}) %>
 
     <div class="movies">
         <% movies.results.forEach(movie => { %>
         <%- include('../includes/movie-card.ejs', {movie: movie}) %>
         <% }) %>
     </div>
+
+    <%- include('../includes/footer.ejs', {currentPage: movies.page, lastPage: movies.total_pages}) %>
 
     <script src="/assets/js/main.js"></script>
 
