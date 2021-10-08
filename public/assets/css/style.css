@@ -97,8 +97,40 @@ a:visited {
     border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
+
+.movie-details-voting {
+    display: flex;
+    justify-content: flex-end;
+}
+.movie-details-voting-container {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 0.5rem 2.5rem 0.5rem 5rem;
+    border-top-left-radius: 5rem;
+    border-bottom-left-radius: 5rem;
+    text-align: center;
+    background: #fff;
+    color: #333;
+    position: relative;
+    top: -5rem;
+}
+
+.movie-details-voting p:first-of-type {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+}
+.movie-details-voting p:first-of-type > span {
+    font-size: 1.2rem;
+}
+.movie-details-voting p:last-of-type {
+    color: #9a9bb2;
+    font-size: 1.2rem;
+}
+
 .movie-details-details {
-    padding: 10%;
+    padding: 0 10% 5%;
     color: #ccc;
     width: 50%;
 }

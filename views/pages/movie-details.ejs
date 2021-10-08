@@ -11,11 +11,23 @@
 </head>
 
 <body>
+    <% console.log(details) %>
+
     <%- include('../includes/header.ejs') %>
     <section class="movie-details">
 
         <div class="movie-details-image"
             style="background: url('https://image.tmdb.org/t/p/w1280<%= details.backdrop_path %>') top/cover no-repeat;">
+        </div>
+
+        <div class="movie-details-voting">
+            <div class="movie-details-voting-container">
+                <img src="/assets/img/star.svg" alt="">
+                <p>
+                    <%= details.vote_average %>/<span>10</span>
+                </p>
+                <p><%= details.vote_count.toLocaleString() %></p>
+            </div>
         </div>
 
         <div class="movie-details-details">
