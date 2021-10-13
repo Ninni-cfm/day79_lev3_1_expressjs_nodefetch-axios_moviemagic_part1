@@ -6,6 +6,11 @@ function search() {
     while (searchText.indexOf('/') >= 0) {
         searchText = searchText.replace('/', '%2f');
     }
+
+    while (searchText.indexOf(':') >= 0) {
+        searchText = searchText.replace(':', '%3a');
+    }
+
     while (searchText.indexOf('\\') >= 0) {
         searchText = searchText.replace('\\', '%5c');
     }
